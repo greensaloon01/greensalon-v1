@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, minimum-scale=1, maximum-scale=1">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -192,6 +192,23 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--txt);disp
 .sp{width:18px;height:18px;border:2px solid var(--b2);border-top-color:var(--acc);border-radius:50%;animation:spin .7s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 .ver-footer{position:fixed;bottom:2px;right:6px;font-size:9px;color:rgba(255,255,255,.06);pointer-events:none;user-select:none}
+
+/* 🔥 FORCE TABLET / DESKTOP FULL WIDTH FIX */
+@media (min-width: 768px) {
+  html, body {
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .screens {
+    width: 100%;
+  }
+
+  .wrap {
+    max-width: 1200px; /* increase layout width */
+  }
+}
 </style>
 </head>
 <body>
